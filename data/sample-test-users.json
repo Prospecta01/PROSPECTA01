@@ -1,0 +1,42 @@
+[
+  {
+    "Usuario": "90000001",
+    "Contraseña": "Prospecta1",
+    "Nombre": "Valeria",
+    "Apellido": "Quispe",
+    "Región": "Lima",
+    "Locación": "Lima Centro",
+    "Rol": "Prospector",
+    "Status": "ACTIVO"
+  },
+  {
+    "Usuario": "90000002",
+    "Contraseña": "Desarrollador1",
+    "Nombre": "Diego",
+    "Apellido": "Vega",
+    "Región": "Lima",
+    "Locación": "Lima Centro",
+    "Rol": "Desarrollador",
+    "Status": "ACTIVO"
+  },
+  {
+    "Usuario": "90000010",
+    "Contraseña": "Supervisor1",
+    "Nombre": "Mariana",
+    "Apellido": "Torres",
+    "Región": "Lima",
+    "Locación": "Lima",
+    "Rol": "Supervisor",
+    "Status": "ACTIVO"
+  },
+  {
+    "Usuario": "90000099",
+    "Contraseña": "Administrador1",
+    "Nombre": "Andrea",
+    "Apellido": "Ramos",
+    "Región": "Nacional",
+    "Locación": "Nacional",
+    "Rol": "Administrador",
+    "Status": "ACTIVO"
+  }
+]
