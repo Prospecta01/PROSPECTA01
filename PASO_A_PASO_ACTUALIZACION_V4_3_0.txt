@@ -1,0 +1,41 @@
+PROSPECTA | RTM v4.3.0 — PASO A PASO
+
+1. Haz una copia de seguridad de tu carpeta actual.
+2. Descomprime PROSPECTA_RTM_V4_3_0_COMPRA_CERO_CODIGO_SAP.
+3. Copia tu archivo .env actual dentro de la nueva carpeta.
+4. En Supabase > SQL Editor > New query ejecuta completo:
+   supabase/14_v4_3_0_compra_cero_codigo_sap.sql
+5. Debe aparecer Success.
+6. Abre PowerShell dentro de la nueva carpeta y ejecuta:
+   npm.cmd install
+7. Para prueba local del frontend:
+   npm.cmd run dev
+8. Valida:
+   - Validador > Avance de Prospectores: columna Código cliente SAP.
+   - Supervisor > Gestión compra cero: nueva sección y KPIs.
+   - Administrador > Carga de bases: Clientes Compra Cero.
+   - Administrador > Bases de Datos > Visitas exitosas: solo altas + Código SAP.
+   - Coordinador Regional > Base de Altas: filtros Desde/Hasta/Región/Locación + exportar Excel.
+9. Detén Vite con Ctrl+C.
+10. Genera build:
+   npm.cmd run build
+11. Vincula la nueva carpeta al sitio existente:
+   netlify.cmd link
+   -> Link this directory to an existing project
+   -> busca PROSPECTA
+   -> selecciona prospecta-rtm
+12. Publica:
+   netlify.cmd deploy --build --prod
+13. Al finalizar debe aparecer Production deploy is live.
+14. En producción, cierra sesión, Ctrl+F5 e inicia sesión nuevamente.
+
+CARGA COMPRA CERO
+- Administrador > Carga de bases > Clientes Compra Cero.
+- Descarga Plantilla.
+- Columnas: Código Cliente, Cliente, Región, Locación.
+- Carga el Excel y confirma.
+- La carga anterior queda histórica/inactiva; la nueva es la vigente.
+
+NOTA DE MÉTRICAS
+% compra cero = Clientes compra cero vigentes de la Región / Total visitas exitosas de esa Región.
+% gestión compra cero = Clientes con ¿Realizó compra? = Sí / Clientes compra cero vigentes de la Región.

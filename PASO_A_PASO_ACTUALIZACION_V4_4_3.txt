@@ -1,0 +1,20 @@
+PROSPECTA | RTM v4.4.3 — ENCABEZADO COMPACTO VALIDADOR
+
+CAMBIO
+- Solo para Validador en escritorio/laptop.
+- Reduce la altura del título Avance de Prospectores.
+- Convierte el banner Control de altas registradas en una franja compacta horizontal.
+- Conserva filtros compactos en una sola fila.
+- Da mayor protagonismo y espacio visible a Base de altas de Prospectores.
+- Móvil/tablet sin cambios.
+- No requiere SQL nuevo.
+
+ACTUALIZACION
+1. Copiar el .env vigente a esta carpeta.
+2. Abrir PowerShell en la RAIZ del proyecto.
+3. Ejecutar:
+   npm.cmd install
+   npm.cmd run build
+   netlify.cmd link
+   netlify.cmd deploy --build --prod
+4. En producción hacer Ctrl+F5.

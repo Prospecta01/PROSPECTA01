@@ -1,0 +1,14 @@
+PROSPECTA | RTM v4.3.3
+
+1. Supabase > SQL Editor > New query.
+2. Ejecuta completo: supabase/17_v4_3_3_prospectores_activos_vigentes.sql
+3. Conserva tu archivo .env en esta carpeta.
+4. PowerShell en la carpeta del proyecto:
+   npm.cmd install
+   npm.cmd run build
+   netlify.cmd link
+   netlify.cmd deploy --build --prod
+5. En producción haz Ctrl+F5.
+6. Ingresa como Supervisor y valida Avance de Prospectores.
+
+La tabla debe mostrar solo Prospectores ACTIVOS presentes en la última plantilla vigente y pertenecientes a la región del Supervisor.

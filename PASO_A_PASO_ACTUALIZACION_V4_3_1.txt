@@ -1,0 +1,15 @@
+PROSPECTA | RTM v4.3.1 — ACTUALIZACIÓN
+
+1. Supabase > SQL Editor > New query.
+2. Ejecuta completo: supabase/15_v4_3_1_compra_cero_codigo_sap.sql
+3. Copia tu archivo .env actual a esta carpeta.
+4. Abre PowerShell en esta carpeta:
+   npm.cmd install
+   npm.cmd run build
+5. Vincula el proyecto existente si la carpeta aún no está vinculada:
+   netlify.cmd link
+6. Publica:
+   netlify.cmd deploy --build --prod
+7. En producción haz Ctrl+F5.
+8. Descarga la nueva plantilla Compra Cero y valida que tenga exactamente: Código SAP, Región, Locación.
+9. Supervisor > Gestión compra cero: valida columnas Código SAP, Locación, Visita, ¿Realizó compra?, Cantidad vendida, Comentarios.

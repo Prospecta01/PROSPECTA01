@@ -1,0 +1,32 @@
+{
+  "name": "prospecta-rtm-supabase",
+  "private": true,
+  "version": "4.6.7",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "vite build",
+    "seed": "node scripts/seedSupabase.mjs",
+    "dev:netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "lucide-react": "^0.542.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.2",
+    "recharts": "^3.1.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^17.2.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vite": "^7.1.4"
+  },
+  "description": "PROSPECTA RTM v4.3.0 - Base de Altas Coordinador, Gestión Compra Cero Supervisor, Código cliente SAP Validador y base Compra Cero Administrador."
+}

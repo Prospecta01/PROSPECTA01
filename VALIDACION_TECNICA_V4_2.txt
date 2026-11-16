@@ -1,0 +1,16 @@
+PROSPECTA RTM v4.2.0 — VALIDACIÓN TÉCNICA DEL PAQUETE
+
+- Base de desarrollo: v4.1.2 UI Mobile Fix.
+- Sintaxis React/JS revisada: 52 archivos fuente, sin errores de parseo.
+- Sintaxis Node (.js/.mjs) revisada, sin errores.
+- Imports relativos revisados: 0 rutas faltantes.
+- Excel Rutas_por_Locacion.xlsx: coincide exactamente con el archivo adjunto del usuario.
+- SQL 10: 1,568 pares Locación Comercial / Ruta, 74 locaciones, sin duplicados en la carga inicial.
+- Demo v4.2 incluido como DEMO_ABRIR.html.
+
+Limitación del entorno de generación:
+- Se intentó ejecutar `npm install` para realizar un build Vite completo, pero la descarga de dependencias agotó el tiempo de red del entorno.
+- Por ello no se certifica aquí el build Vite final. En el equipo de despliegue debe ejecutarse:
+  npm.cmd install
+  npm.cmd run build
+  y confirmar `✓ built in ...` antes del deploy.

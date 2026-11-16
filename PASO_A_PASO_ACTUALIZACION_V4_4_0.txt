@@ -1,0 +1,18 @@
+PROSPECTA | RTM v4.4.0 — ACTUALIZACIÓN
+
+1. En Supabase > SQL Editor > New query, ejecutar completo:
+   supabase/19_v4_4_0_validador_estados_fotos.sql
+2. Copiar el .env vigente a esta carpeta.
+3. Abrir PowerShell en la RAÍZ del proyecto (donde están package.json y netlify.toml).
+4. Ejecutar:
+   npm.cmd install
+   npm.cmd run build
+5. Vincular al sitio existente si la carpeta es nueva:
+   netlify.cmd link
+6. Publicar:
+   netlify.cmd deploy --build --prod
+7. En producción hacer Ctrl+F5.
+8. Validar:
+   - Prospector > Documentos: Foto de Fachada + Foto interior.
+   - Validador: Pendiente/Completado/Rechazado, KPI Rechazadas, nueva productividad, Geolocalizado, Fecha Prospector y Fecha Aprobador.
+   - Exportar Excel conserva las nuevas columnas.

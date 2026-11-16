@@ -1,0 +1,33 @@
+PROSPECTA | RTM v4.2.2 — ACTUALIZACIÓN
+
+CAMBIOS
+- Gestión de Usuarios muestra únicamente usuarios de la última plantilla vigente.
+- Usuarios ausentes en una nueva plantilla dejan de verse, pero conservan historial operativo.
+- Nueva columna obligatoria CELULAR en Excel, formulario y tabla.
+- Cada usuario puede editarse individualmente.
+- Carga de bases muestra solo el último archivo vigente de Usuarios y Ruta por Locación y permite descargarlo.
+- Hotfix de Registro de Visitas para evitar spinner infinito si falla el catálogo de rutas.
+
+ORDEN DE ACTUALIZACIÓN
+1. Haz una copia de seguridad de tu carpeta actual.
+2. En Supabase > SQL Editor > New query ejecuta completo:
+   supabase/12_v4_2_2_usuarios_vigentes_archivos.sql
+3. Reemplaza tu carpeta local por esta versión, conservando tu archivo .env actual.
+4. Abre PowerShell dentro de la carpeta y ejecuta:
+   npm.cmd install
+   npm.cmd run dev
+5. Prueba:
+   - Admin > Gestión de Usuarios: aparece Celular y botón Editar.
+   - Importa una plantilla nueva: solo sus usuarios deben quedar visibles.
+   - Admin > Carga de bases: debe aparecer el último archivo vigente y botón Descargar.
+   - Prospector > Registro de Visitas: no debe quedar spinner infinito.
+6. Detén Vite con Ctrl+C y ejecuta:
+   npm.cmd run build
+7. Publica el proyecto completo:
+   netlify.cmd deploy --prod
+
+IMPORTANTE
+- No borres usuarios históricos de Supabase: la app los oculta usando EN_PLANTILLA_VIGENTE.
+- El archivo Excel de usuarios debe tener las columnas:
+  Usuario, Contraseña, Nombre, Apellido, Celular, Región, Locación, Rol, Status.
+- Supervisor y Coordinador Regional siguen sin Locación asignada en su perfil.

@@ -1,0 +1,63 @@
+PROSPECTA RTM v4.2.1 - PASO A PASO DE ACTUALIZACION
+
+IMPORTANTE
+Esta actualización parte de v4.2.0.
+Regla final del Supervisor:
+- En Administrador > Nuevo/Editar usuario: Supervisor NO selecciona Locación; solo Región.
+- En el dashboard del Supervisor: SÍ existe el filtro Locación y solo muestra locaciones de su Región.
+
+1) RESPALDA TU CARPETA ACTUAL
+Haz una copia de tu carpeta PROSPECTA_RTM actual antes de reemplazar archivos.
+
+2) SUPABASE PRIMERO
+En Supabase > SQL Editor > New query:
+- abre supabase/11_v4_2_1_supervisor_region_locacion.sql
+- copia todo
+- pulsa Run
+
+Este script deja LOCACION en blanco/nulo para Supervisor y Coordinador Regional. No modifica la Locación de Prospectores.
+
+3) REEMPLAZA EL CODIGO
+Usa esta carpeta v4.2.1 como nueva carpeta del proyecto.
+Conserva tu archivo .env actual con:
+- VITE_SUPABASE_URL
+- VITE_SUPABASE_PUBLISHABLE_KEY
+- VITE_DEMO_MODE=false
+
+4) INSTALA Y PRUEBA
+Abre PowerShell dentro de la carpeta del proyecto:
+
+npm.cmd install
+npm.cmd run dev
+
+Prueba:
+A. Admin > Gestión de Usuarios > Nuevo usuario.
+B. Selecciona Rol = Supervisor.
+C. Debe desaparecer Locación.
+D. Guarda el Supervisor con una Región.
+E. Ingresa como Supervisor.
+F. En Seguimiento operativo deben verse Año, Mes, Fecha, Región y Locación.
+G. Cambia Locación y verifica que KPIs/tabla cambien.
+H. En Validación de visitas también debe aparecer Locación.
+
+5) GENERA EL BUILD
+npm.cmd run build
+
+6) DESPLIEGA EN NETLIFY
+NO subas solo la carpeta dist porque también cambió netlify/functions/admin-users.mjs.
+Desde la carpeta completa del proyecto ejecuta:
+
+netlify.cmd link
+netlify.cmd deploy --build --prod
+
+Si ya está vinculada al sitio correcto, netlify link no te pedirá volver a configurarlo.
+
+7) VALIDACION FINAL EN PRODUCCION
+- Nuevo Supervisor: sin campo Locación.
+- Supervisor guardado: Región sí; Locación vacía/nula.
+- Dashboard Supervisor: filtro Locación visible.
+- Filtro Locación: limitado a la Región del Supervisor.
+- Validación de visitas: filtro Locación visible y funcional.
+
+ARCHIVO SQL NUEVO
+supabase/11_v4_2_1_supervisor_region_locacion.sql

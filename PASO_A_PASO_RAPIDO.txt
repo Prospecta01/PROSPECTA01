@@ -1,0 +1,30 @@
+PROSPECTA RTM v4.2.0 — ACTUALIZACIÓN RÁPIDA DESDE v4.1.2
+
+1) Copiar el archivo .env de v4.1.2 a esta carpeta.
+
+2) SUPABASE
+   SQL Editor > New query
+   Ejecutar SOLO:
+   supabase/10_v4_2_alta_360_validador.sql
+
+   NO volver a ejecutar 01–09.
+
+3) POWERSHELL EN ESTA CARPETA
+   npm.cmd install
+   npm.cmd run build
+
+4) NETLIFY
+   netlify.cmd link
+   Elegir el proyecto existente: prospecta-rtm
+
+5) PUBLICAR
+   netlify.cmd deploy --build --prod
+
+6) LINK DE USUARIOS
+   https://prospecta-rtm.netlify.app
+
+7) PRUEBAS
+   - Prospector: Alta 360 / 4 secciones / documentos / rutas.
+   - Admin: Carga de bases Usuarios + Rutas.
+   - Supervisor: toda su Región, sin filtro Locación.
+   - Validador: Inicio, Fin, Avance, Altas registradas/pendientes, ¿Registrado?.

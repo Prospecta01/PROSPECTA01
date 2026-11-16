@@ -1,0 +1,1 @@
+v4.6.2: Avances de altas en tablas matriciales con encabezados agrupados, totales y alerta roja para COMPLETADO sin geolocalizacion. Se mantienen filtros multiseleccion de region y mes. No requiere SQL adicional.

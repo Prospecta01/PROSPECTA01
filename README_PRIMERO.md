@@ -1,0 +1,3 @@
+# PROSPECTA RTM v4.2.1
+
+Usar `00_LEEME_PRIMERO.md` y `ACTUALIZACION_V4_2_1_SUPERVISOR_REGION_LOCACION.md` como documentación vigente.
